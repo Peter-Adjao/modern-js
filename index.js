@@ -63,11 +63,13 @@ console.log(Boolean({}));
 const productPrice = Number("150");
 const quantity = Number("3");
 
-const total= productPrice * quantity;
+
+if (Number.isNaN(productPrice) || Number.isNaN(quantity)) {
+  console.log("Input is invalid");
+} else {
+  const total = productPrice * quantity;
+
 
 console.log(total);
 console.log(typeof total);
-
-if (total.isNaN) {
-  console.log( "Input is valid" ? "Input number is invalid");
 }
