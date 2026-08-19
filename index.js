@@ -23,53 +23,65 @@
 // console.log(typeof "Alex");
 
 
-console.log(typeof NaN);
+// console.log(typeof NaN);
+//
+//
+// console.log(Boolean(NaN));
+//
+//
+// console.log(Boolean(0));
+//
+//
+// const products = [];
+//
+// if (products.length === 0) {
+//   console.log("Products Exists");
+// }
+//
+// console.log(parseInt("25px"));
+//
+//
+// console.log(Number("100"));
+// console.log(Number("10.5"));
+// console.log(Number("hello"));
+// console.log(Number(""));
+// console.log(Number(true));
+// console.log(Number(false));
+//
+//
+// console.log(Boolean(0));
+// console.log(Boolean(1));
+// console.log(Boolean(""));
+// console.log(Boolean("hello"));
+// console.log(Boolean("false"));
+// console.log(Boolean(null));
+// console.log(Boolean(undefined));
+// console.log(Boolean([]));
+// console.log(Boolean({}));
+//
+//
+// const productPrice = Number("150");
+// const quantity = Number("3");
+//
+//
+// if (Number.isNaN(productPrice) || Number.isNaN(quantity)) {
+//   console.log("Input is invalid");
+// } else {
+//   const total = productPrice * quantity;
+//
+//
+// console.log(total);
+// console.log(typeof total);
+// }
 
 
-console.log(Boolean(NaN));
 
+function example() {
 
-console.log(Boolean(0));
+  console.log(name);
 
-
-const products = [];
-
-if (products.length === 0) {
-  console.log("Products Exists");
+  var name = "Peter";
 }
+example();
 
-console.log(parseInt("25px"));
-
-
-console.log(Number("100"));
-console.log(Number("10.5"));
-console.log(Number("hello"));
-console.log(Number(""));
-console.log(Number(true));
-console.log(Number(false));
-
-
-console.log(Boolean(0));
-console.log(Boolean(1));
-console.log(Boolean(""));
-console.log(Boolean("hello"));
-console.log(Boolean("false"));
-console.log(Boolean(null));
-console.log(Boolean(undefined));
-console.log(Boolean([]));
-console.log(Boolean({}));
-
-
-const productPrice = Number("150");
-const quantity = Number("3");
-
-
-if (Number.isNaN(productPrice) || Number.isNaN(quantity)) {
-  console.log("Input is invalid");
-} else {
-  const total = productPrice * quantity;
-
-
-console.log(total);
-console.log(typeof total);
-}
+console.log(typeof name);
