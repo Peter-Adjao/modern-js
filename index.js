@@ -76,12 +76,36 @@
 
 
 
-function example() {
+// function example() {
+//
+//   console.log(name);
+//
+//   var name = "Peter";
+// }
+// example();
+//
+// console.log(typeof name);
 
-  console.log(name);
+console.log(10 > 5);
+console.log("10" === 10);
 
-  var name = "Peter";
+const isloggedIn  = false;
+if(!isloggedIn) {
+  console.log("Please log in");
 }
-example();
 
-console.log(typeof name);
+const score = 50;
+
+switch(score) {
+  case 90:
+  console.log("Excellent")
+  break;
+  case 75:
+  console.log("Good");
+  break;
+  case 50:
+  console.log("Average")
+  break;
+  default:
+  console.log("Needs Inprovement");
+}
