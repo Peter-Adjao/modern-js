@@ -86,26 +86,24 @@
 //
 // console.log(typeof name);
 
-console.log(10 > 5);
-console.log("10" === 10);
 
-const isloggedIn  = false;
-if(!isloggedIn) {
-  console.log("Please log in");
+
+//Loops
+for(let i = 0; i <= 10; i++) {
+  console.log(i);
 }
 
-const score = 50;
 
-switch(score) {
-  case 90:
-  console.log("Excellent")
-  break;
-  case 75:
-  console.log("Good");
-  break;
-  case 50:
-  console.log("Average")
-  break;
-  default:
-  console.log("Needs Inprovement");
+const products =[
+    "Monstera",
+    "Ficus",
+    "Aleo Vera",
+    "Hibiscus",
+    "Sunflower",
+    "Rose",
+    "Catalya"
+];
+
+for (let i = 0; i < products.length; i++) {
+  console.log(products[i]);
 }
