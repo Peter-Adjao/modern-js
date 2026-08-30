@@ -94,16 +94,57 @@ for(let i = 0; i <= 10; i++) {
 }
 
 
-const products =[
-    "Monstera",
-    "Ficus",
-    "Aleo Vera",
-    "Hibiscus",
-    "Sunflower",
-    "Rose",
-    "Catalya"
+// const products =[
+//     "Monstera",
+//     "Ficus",
+//     "Aleo Vera",
+//     "Hibiscus",
+//     "Sunflower",
+//     "Rose",
+//     "Catalya"
+// ];
+//
+// for (let i = 0; i < products.length; i++) {
+//   console.log(products[i]);
+// }
+
+//write a for loop that prints :
+
+for (let i = 0; i <= 5; i++) {
+  console.log(i);
+}
+
+for (let i = 5; i >= 0; i--) {
+  console.log(i);
+}
+
+
+//Calculate the total
+const prices = [100, 200, 150, 300];
+
+let total = 0;
+
+for (let i = 0; i < prices.length; i++) {
+  total += prices[i];
+}
+
+console.log(total);
+
+
+//Find how many products cost more than 100
+const products = [
+  { name: "Snake Plant", price: 150 },
+  { name: "Aloe Vera", price: 80 },
+  { name: "Monstera", price: 250 },
+  { name: "Peace Lily", price: 120 }
 ];
 
+ let product = 0;
+
 for (let i = 0; i < products.length; i++) {
-  console.log(products[i]);
+  if (products[i].price > 100){
+    product++;
+  }
 }
+
+console.log(product);
