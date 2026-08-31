@@ -132,19 +132,55 @@ console.log(total);
 
 
 //Find how many products cost more than 100
+// const products = [
+//   { name: "Snake Plant", price: 150, category: "Outdoor"},
+//   { name: "Aloe Vera", price: 80, category: "Succulent"},
+//   { name: "Monstera", price: 250, category: "Classic"},
+//   { name: "Peace Lily", price: 120, category: "Indoor"}
+// ];
+//
+//  let product = 0;
+//
+// for (let i = 0; i < products.length; i++) {
+//   if (products[i].price > 100){
+//     product++;
+//   }
+// }
+//
+// console.log(product);
+
+//Forward and backkward iteration
+
+// const products = [
+//   { name: "Snake Plant", price: 150, category: "Outdoor"},
+//   { name: "Aloe Vera", price: 80, category: "Succulent"},
+//   { name: "Monstera", price: 250, category: "Classic"},
+//   { name: "Peace Lily", price: 120, category: "Indoor"}
+// ];
+//
+// for ( let i = 0; i < products.length; i++) {
+//   console.log(products[i].name);
+//   console.log(products[i].price);
+//   console.log(products[i].category);
+// }
+
+
+//Backward iteration
+
 const products = [
-  { name: "Snake Plant", price: 150 },
-  { name: "Aloe Vera", price: 80 },
-  { name: "Monstera", price: 250 },
-  { name: "Peace Lily", price: 120 }
+  { name: "Snake Plant", price: 150, category: "Outdoor"},
+  { name: "Aloe Vera", price: 80, category: "Succulent"},
+  { name: "Monstera", price: 250, category: "Classic"},
+  { name: "Peace Lily", price: 120, category: "Indoor"}
 ];
 
- let product = 0;
-
-for (let i = 0; i < products.length; i++) {
-  if (products[i].price > 100){
-    product++;
-  }
+for ( let i = products.length - 1; i >= 0; i--) {
+  console.log(products[i].name);
+  console.log(products[i].price);
+  console.log(products[i].category);
 }
 
-console.log(product);
+
+for (let i = 0, j = 10; i < 5; i++, j--) {
+  console.log(i, j);
+}
