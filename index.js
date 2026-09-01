@@ -110,26 +110,26 @@ for(let i = 0; i <= 10; i++) {
 
 //write a for loop that prints :
 
-for (let i = 0; i <= 5; i++) {
-  console.log(i);
-}
-
-for (let i = 5; i >= 0; i--) {
-  console.log(i);
-}
-
-
-//Calculate the total
-const prices = [100, 200, 150, 300];
-
-let total = 0;
-
-for (let i = 0; i < prices.length; i++) {
-  total += prices[i];
-}
-
-console.log(total);
-
+// for (let i = 0; i <= 5; i++) {
+//   console.log(i);
+// }
+//
+// for (let i = 5; i >= 0; i--) {
+//   console.log(i);
+// }
+//
+//
+// //Calculate the total
+// const prices = [100, 200, 150, 300];
+//
+// let total = 0;
+//
+// for (let i = 0; i < prices.length; i++) {
+//   total += prices[i];
+// }
+//
+// console.log(total);
+// //
 
 //Find how many products cost more than 100
 // const products = [
@@ -167,6 +167,7 @@ console.log(total);
 
 //Backward iteration
 
+
 const products = [
   { name: "Snake Plant", price: 150, category: "Outdoor"},
   { name: "Aloe Vera", price: 80, category: "Succulent"},
@@ -184,3 +185,15 @@ for ( let i = products.length - 1; i >= 0; i--) {
 for (let i = 0, j = 10; i < 5; i++, j--) {
   console.log(i, j);
 }
+
+
+// calculate total price
+const prices = [20, 50, 200,79, 90, 156]
+
+let total = 0;
+
+ for ( let i = 0; i < prices.length; i++) {
+   total += prices[i];
+ }
+
+console.log(total);
