@@ -197,3 +197,28 @@ let total = 0;
  }
 
 console.log(total);
+
+
+//Print Everything
+const fruits = ["Apple", "Banana", "Orange", "Manngo"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+
+//Calculate the cart total
+
+const cart = [
+  { name: "Snake Plant", price: 150, quantity: 2 },
+  { name: "Aloe Vera", price: 80, quantity: 3 },
+  { name: "Monstera", price: 250, quantity: 1 }
+];
+
+let cartTotal = 0;
+
+for (let i = 0; i < cart.length; i++) {
+  cartTotal += (cart[i].price * cart[i].quantity);
+}
+
+console.log(cartTotal);
