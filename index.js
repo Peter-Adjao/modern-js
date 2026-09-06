@@ -89,9 +89,9 @@
 
 
 //Loops
-for(let i = 0; i <= 10; i++) {
-  console.log(i);
-}
+// for(let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
 
 
 // const products =[
@@ -182,9 +182,9 @@ for ( let i = products.length - 1; i >= 0; i--) {
 }
 
 
-for (let i = 0, j = 10; i < 5; i++, j--) {
-  console.log(i, j);
-}
+// for (let i = 0, j = 10; i < 5; i++, j--) {
+//   console.log(i, j);
+// }
 
 
 // calculate total price
@@ -218,7 +218,57 @@ const cart = [
 let cartTotal = 0;
 
 for (let i = 0; i < cart.length; i++) {
+
   cartTotal += (cart[i].price * cart[i].quantity);
 }
 
 console.log(cartTotal);
+
+
+
+// While loop
+// let count = 5;
+//
+// while (count >= 0) {
+//   console.log(`Before update ${count}`);
+//
+//   count--;
+//
+//   console.log(`During update ${count}`);
+// }
+//
+// console.log(`After update ${count}`);
+
+//While loop reverse iteration
+
+let count = 10;
+
+while  (count >= 1) {
+  console.log(count);
+
+  count--;
+}
+
+
+//Withdraw while there is enough balance
+
+let balance = 1000;
+let withdrawal = 200;
+
+while (balance >= withdrawal) {
+  console.log(balance);
+  balance -= withdrawal;
+}
+console.log(balance);
+
+// Retry Logic
+let attempts = 0;
+let success = false;
+
+while (attempts < 3 && !success) {
+  attempts++;
+
+  success = attempts === 2;
+
+console.log(`Attempt ${attempts}: success = ${success}`);
+}
