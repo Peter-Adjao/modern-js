@@ -209,20 +209,20 @@ for (let i = 0; i < fruits.length; i++) {
 
 //Calculate the cart total
 
-const cart = [
-  { name: "Snake Plant", price: 150, quantity: 2 },
-  { name: "Aloe Vera", price: 80, quantity: 3 },
-  { name: "Monstera", price: 250, quantity: 1 }
-];
-
-let cartTotal = 0;
-
-for (let i = 0; i < cart.length; i++) {
-
-  cartTotal += (cart[i].price * cart[i].quantity);
-}
-
-console.log(cartTotal);
+// const cart = [
+//   { name: "Snake Plant", price: 150, quantity: 2 },
+//   { name: "Aloe Vera", price: 80, quantity: 3 },
+//   { name: "Monstera", price: 250, quantity: 1 }
+// ];
+//
+// let cartTotal = 0;
+//
+// for (let i = 0; i < cart.length; i++) {
+//
+//   cartTotal += (cart[i].price * cart[i].quantity);
+// }
+//
+// console.log(cartTotal);
 
 
 
@@ -241,13 +241,13 @@ console.log(cartTotal);
 
 //While loop reverse iteration
 
-let count = 10;
-
-while  (count >= 1) {
-  console.log(count);
-
-  count--;
-}
+// let count = 10;
+//
+// while  (count >= 1) {
+//   console.log(count);
+//
+//   count--;
+// }
 
 
 //Withdraw while there is enough balance
@@ -272,3 +272,36 @@ while (attempts < 3 && !success) {
 
 console.log(`Attempt ${attempts}: success = ${success}`);
 }
+
+
+//Do while Loops
+
+let count = 0;
+
+do {
+  console.log(count);
+  count++;
+} while (count <= 5);
+
+
+//Reverse printing
+let number = 5;
+
+do {
+  console.log(number);
+  number--;
+} while (number >= 0);
+
+
+// Retry Logic with do while
+let retries = 0;
+let successful = false;
+
+do {
+  retries++;
+
+  successful = retries === 2;
+
+  console.log(`Retries ${retries}: successful = ${successful}`);
+
+} while (retries < 3 && !successful);
