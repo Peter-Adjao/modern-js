@@ -274,23 +274,23 @@ console.log(`Attempt ${attempts}: success = ${success}`);
 }
 
 
-//Do while Loops
-
-let count = 0;
-
-do {
-  console.log(count);
-  count++;
-} while (count <= 5);
-
-
-//Reverse printing
-let number = 5;
-
-do {
-  console.log(number);
-  number--;
-} while (number >= 0);
+// //Do while Loops
+//
+// let count = 0;
+//
+// do {
+//   console.log(count);
+//   count++;
+// } while (count <= 5);
+//
+//
+// //Reverse printing
+// let number = 5;
+//
+// do {
+//   console.log(number);
+//   number--;
+// } while (number >= 0);
 
 
 // Retry Logic with do while
@@ -302,6 +302,34 @@ do {
 
   successful = retries === 2;
 
-  console.log(`Retries ${retries}: successful = ${successful}`);
+  console.log(`Retry ${retries}: successful = ${successful}`);
 
 } while (retries < 3 && !successful);
+
+//Break
+
+for (let i = 0; i < 10; i++) {
+  if (i === 6) {
+    break;
+  }
+  console.log(i);
+}
+
+//Searching for expensive products
+const items = [
+  { name: "Snake Plant", price: 150 },
+  { name: "Aloe Vera", price: 80 },
+  { name: "Monstera", price: 250 },
+  { name: "Peace Lily", price: 120 }
+];
+
+let expensiveProduct = null;
+
+for (let i = 0; i < items.length; i++) {
+  if(items[i].price > 200) {
+    expensiveProduct = items[i];
+    break;
+  }
+}
+
+console.log(expensiveProduct);
