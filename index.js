@@ -168,18 +168,18 @@
 //Backward iteration
 
 
-const products = [
-  { name: "Snake Plant", price: 150, category: "Outdoor"},
-  { name: "Aloe Vera", price: 80, category: "Succulent"},
-  { name: "Monstera", price: 250, category: "Classic"},
-  { name: "Peace Lily", price: 120, category: "Indoor"}
-];
-
-for ( let i = products.length - 1; i >= 0; i--) {
-  console.log(products[i].name);
-  console.log(products[i].price);
-  console.log(products[i].category);
-}
+// const products = [
+//   { name: "Snake Plant", price: 150, category: "Outdoor"},
+//   { name: "Aloe Vera", price: 80, category: "Succulent"},
+//   { name: "Monstera", price: 250, category: "Classic"},
+//   { name: "Peace Lily", price: 120, category: "Indoor"}
+// ];
+//
+// for ( let i = products.length - 1; i >= 0; i--) {
+//   console.log(products[i].name);
+//   console.log(products[i].price);
+//   console.log(products[i].category);
+// }
 
 
 // for (let i = 0, j = 10; i < 5; i++, j--) {
@@ -188,24 +188,24 @@ for ( let i = products.length - 1; i >= 0; i--) {
 
 
 // calculate total price
-const prices = [20, 50, 200,79, 90, 156]
-
-let total = 0;
-
- for ( let i = 0; i < prices.length; i++) {
-   total += prices[i];
- }
-
-console.log(total);
-
-
-//Print Everything
-const fruits = ["Apple", "Banana", "Orange", "Manngo"];
-
-for (let i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
-}
-
+// const prices = [20, 50, 200,79, 90, 156]
+//
+// let total = 0;
+//
+//  for ( let i = 0; i < prices.length; i++) {
+//    total += prices[i];
+//  }
+//
+// console.log(total);
+//
+//
+// //Print Everything
+// const fruits = ["Apple", "Banana", "Orange", "Manngo"];
+//
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+//
 
 //Calculate the cart total
 
@@ -252,27 +252,27 @@ for (let i = 0; i < fruits.length; i++) {
 
 //Withdraw while there is enough balance
 
-let balance = 1000;
-let withdrawal = 200;
-
-while (balance >= withdrawal) {
-  console.log(balance);
-  balance -= withdrawal;
-}
-console.log(balance);
-
-// Retry Logic
-let attempts = 0;
-let success = false;
-
-while (attempts < 3 && !success) {
-  attempts++;
-
-  success = attempts === 2;
-
-console.log(`Attempt ${attempts}: success = ${success}`);
-}
-
+// let balance = 1000;
+// let withdrawal = 200;
+//
+// while (balance >= withdrawal) {
+//   console.log(balance);
+//   balance -= withdrawal;
+// }
+// console.log(balance);
+//
+// // Retry Logic
+// let attempts = 0;
+// let success = false;
+//
+// while (attempts < 3 && !success) {
+//   attempts++;
+//
+//   success = attempts === 2;
+//
+// console.log(`Attempt ${attempts}: success = ${success}`);
+// }
+//
 
 // //Do while Loops
 //
@@ -294,42 +294,99 @@ console.log(`Attempt ${attempts}: success = ${success}`);
 
 
 // Retry Logic with do while
-let retries = 0;
-let successful = false;
+// let retries = 0;
+// let successful = false;
+//
+// do {
+//   retries++;
+//
+//   successful = retries === 2;
+//
+//   console.log(`Retry ${retries}: successful = ${successful}`);
+//
+// } while (retries < 3 && !successful);
+//
+// //Break
+//
+// for (let i = 0; i < 10; i++) {
+//   if (i === 6) {
+//     break;
+//   }
+//   console.log(i);
+// }
+//
+// //Searching for expensive products
+// const items = [
+//   { name: "Snake Plant", price: 150 },
+//   { name: "Aloe Vera", price: 80 },
+//   { name: "Monstera", price: 250 },
+//   { name: "Peace Lily", price: 120 }
+// ];
+//
+// let expensiveProduct = null;
+//
+// for (let i = 0; i < items.length; i++) {
+//   if(items[i].price > 200) {
+//     expensiveProduct = items[i];
+//     break;
+//   }
+// }
+//
+// console.log(expensiveProduct);
+//
 
-do {
-  retries++;
+// break
 
-  successful = retries === 2;
+// for (let row = 1; row <= 3; row++) {
+//   for (let column = 1; column <= 3; column++) {
+//     if (column === 2) {
+//       break;
+//     }
+//     console.log(row, column);
+//   }
+// }
 
-  console.log(`Retry ${retries}: successful = ${successful}`);
 
-} while (retries < 3 && !successful);
+//Write a for loop that counts from 1 to 10, but stops when it reaches 6
 
-//Break
+// for ( let count = 1; count <= 10; count++) {
+//   if (count === 6) {
+//     break;
+//   }
+//   console.log(count);
+// }
 
-for (let i = 0; i < 10; i++) {
-  if (i === 6) {
-    break;
-  }
-  console.log(i);
-}
 
-//Searching for expensive products
-const items = [
-  { name: "Snake Plant", price: 150 },
-  { name: "Aloe Vera", price: 80 },
-  { name: "Monstera", price: 250 },
-  { name: "Peace Lily", price: 120 }
+//Break after number is found
+// const numbers = [4, 8, 15, 16, 23, 42];
+//
+// let number = 20;
+//
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] > number) {
+//     number =  numbers[i];
+//     break;
+//   }
+// }
+// console.log(number);
+
+// checking whether a particular product exists.
+
+const products = [
+  { id: 1, name: "Snake Plant" },
+  { id: 2, name: "Aloe Vera" },
+  { id: 3, name: "Monstera" },
+  { id: 4, name: "Peace Lily" }
 ];
 
-let expensiveProduct = null;
+const targetId = 3;
+let foundProduct = null;
 
-for (let i = 0; i < items.length; i++) {
-  if(items[i].price > 200) {
-    expensiveProduct = items[i];
+for (let i = 0; i < products.length; i++) {
+  if (products[i].id === targetId) {
+    foundProduct = products[i];
     break;
   }
 }
 
-console.log(expensiveProduct);
+console.log(foundProduct);
