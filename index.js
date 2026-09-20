@@ -372,21 +372,62 @@
 
 // checking whether a particular product exists.
 
+
+// Continue
+
+// for (let i = 1; i <= 5; i++) {
+//   console.log(`Start:`, i);
+//
+//   if (i === 3) {
+//     continue;
+//   }
+//   console.log(`End:`, i);
+// }
+//
+// let count = 0;
+//
+// while (count < 5) {
+//   count++;
+//
+//   if (count === 3) {
+//     continue;
+//   }
+//
+//   console.log(count);
+// }
+
+//Print validd prices
+
+
+const prices = [150, -20, 80, 0, 250, -10, 120];
+
+for (let i = 0; i < prices.length; i++) {
+  if (prices[i] <= 0) {
+    continue;
+  }
+  console.log(prices[i]);
+}
+
+//Practical Challenge
+
 const products = [
-  { id: 1, name: "Snake Plant" },
-  { id: 2, name: "Aloe Vera" },
-  { id: 3, name: "Monstera" },
-  { id: 4, name: "Peace Lily" }
+  { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+  { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+  { id: 3, name: "Monstera", price: 250, stock: 7 },
+  { id: 4, name: "Peace Lily", price: 120, stock: 0 },
+  { id: 5, name: "Spider Plant", price: 100, stock: 5 }
 ];
 
 const targetId = 3;
-let foundProduct = null;
+let foundProduct= null;
 
 for (let i = 0; i < products.length; i++) {
-  if (products[i].id === targetId) {
-    foundProduct = products[i];
-    break;
-  }
-}
+    if (products[i].stock <= 0) {
+      continue;
 
+    } else if (targetId === products[i].id) {
+      foundProduct = products[i];
+      break;
+    }
+}
 console.log(foundProduct);
