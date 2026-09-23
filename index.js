@@ -437,6 +437,20 @@ console.log(foundProduct);
 for (let i = 1; i <= 3; i++) {
   for (let j = 1; j <= 3; j++) {
 
-    console.log(i, j);
+    const totalMultiplication = i * j;
+
+    console.log(`${i} x ${j} = ${totalMultiplication}`);
+  }
+}
+
+const matrix = [
+  [10, 20, 30],
+  [40, 50, 60],
+  [70, 80, 90]
+];
+
+for (let row = 0; row < matrix.length; row++) {
+  for (let column = 0; column < matrix[row].length; column++) {
+    console.log(matrix[row][column]);
   }
 }
