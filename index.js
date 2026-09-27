@@ -410,27 +410,27 @@ for (let i = 0; i < prices.length; i++) {
 
 //Practical Challenge
 
-const products = [
-  { id: 1, name: "Snake Plant", price: 150, stock: 4 },
-  { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
-  { id: 3, name: "Monstera", price: 250, stock: 7 },
-  { id: 4, name: "Peace Lily", price: 120, stock: 0 },
-  { id: 5, name: "Spider Plant", price: 100, stock: 5 }
-];
-
-const targetId = 3;
-let foundProduct= null;
-
-for (let i = 0; i < products.length; i++) {
-    if (products[i].stock <= 0) {
-      continue;
-
-    } else if (targetId === products[i].id) {
-      foundProduct = products[i];
-      break;
-    }
-}
-console.log(foundProduct);
+// const products = [
+//   { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+//   { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+//   { id: 3, name: "Monstera", price: 250, stock: 7 },
+//   { id: 4, name: "Peace Lily", price: 120, stock: 0 },
+//   { id: 5, name: "Spider Plant", price: 100, stock: 5 }
+// ];
+//
+// const targetId = 3;
+// let foundProduct= null;
+//
+// for (let i = 0; i < products.length; i++) {
+//     if (products[i].stock <= 0) {
+//       continue;
+//
+//     } else if (targetId === products[i].id) {
+//       foundProduct = products[i];
+//       break;
+//     }
+// }
+// console.log(foundProduct);
 
 //Nested Loop
 
@@ -452,5 +452,61 @@ const matrix = [
 for (let row = 0; row < matrix.length; row++) {
   for (let column = 0; column < matrix[row].length; column++) {
     console.log(matrix[row][column]);
+  }
+}
+
+//First challenge
+
+// const categories = [
+//   {
+//     name: "Indoor",
+//     products: [
+//       { name: "Snake Plant", price: 150 },
+//       { name: "Monstera", price: 250 }
+//     ]
+//   },
+//   {
+//     name: "Outdoor",
+//     products: [
+//       { name: "Rose", price: 100 },
+//       { name: "Hibiscus", price: 120 }
+//     ]
+//   }
+// ];
+//
+// for (let i = 0; i < categories.length; i++) {
+//   const category = categories[i];
+//
+// for (let j = 0; j < category.products.length; j++) {
+//   const product = category.products[j];
+//
+//   console.log(`${category.name}: ${product.name} - ${product.price}`)
+//   }
+// }
+
+//Challenge 2
+
+const products = [
+  { id: 1, name: "Snake Plant", price: 150 },
+  { id: 2, name: "Aloe Vera", price: 80 },
+  { id: 3, name: "Monstera", price: 250 }
+];
+
+const cart = [
+  { productId: 1, quantity: 2 },
+  { productId: 3, quantity: 1 }
+];
+
+for (let i = 0; i < products.length; i++) {
+  const product = products[i];
+
+  for (let c = 0; c < cart.length; c++) {
+    const cartItem = cart[c];
+
+    if (product.id === cartItem.productId) {
+      const subTotal = product.price * cartItem.quantity;
+
+      console.log(`${product.name} --> ${product.price} x ${cartItem.quantity} = ${subTotal}`)
+    }
   }
 }
