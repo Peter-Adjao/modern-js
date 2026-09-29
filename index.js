@@ -399,14 +399,14 @@
 //Print validd prices
 
 
-const prices = [150, -20, 80, 0, 250, -10, 120];
-
-for (let i = 0; i < prices.length; i++) {
-  if (prices[i] <= 0) {
-    continue;
-  }
-  console.log(prices[i]);
-}
+// const prices = [150, -20, 80, 0, 250, -10, 120];
+//
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= 0) {
+//     continue;
+//   }
+//   console.log(prices[i]);
+// }
 
 //Practical Challenge
 
@@ -508,5 +508,52 @@ for (let i = 0; i < products.length; i++) {
 
       console.log(`${product.name} --> ${product.price} x ${cartItem.quantity} = ${subTotal}`)
     }
+  }
+}
+
+
+//for....of Loop
+
+const numbers = [4, 8, 15, 16, 23, 42];
+ for (const number of numbers) {
+  if (number > 20){
+    console.log(`Found: ${number}`);
+
+    break;
+  }
+ }
+
+//First for..of Challenge
+
+const prices = [150, 80, 250, 120];
+
+let total = 0;
+for (const price of prices) {
+  total+= price;
+}
+console.log("The total is", total);
+
+
+//Second Challenge
+
+const plants = [
+  { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+  { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+  { id: 3, name: "Monstera", price: 250, stock: 7 },
+  { id: 4, name: "Peace Lily", price: 120, stock: 3 }
+];
+
+const targetId = 3;
+
+for (const plant of plants) {
+  if (plant.stock === 0) {
+
+    continue;
+  }
+
+  if (plant.id === targetId) {
+    console.log("Found:", plant.name);
+
+    break;
   }
 }
