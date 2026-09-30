@@ -557,3 +557,30 @@ for (const plant of plants) {
     break;
   }
 }
+
+//For...in
+
+const user = {
+  name: "Peter",
+  role: "Deeveloper",
+  country: "Ghana"
+};
+
+for (const key in user) {
+  console.log(key, ":", user[key]);
+}
+
+
+//for...in Challenge
+
+const catalogue = {
+  name: "Monstera",
+  price: 250,
+  stock: 7
+};
+
+const property = "price";
+
+for (const key in catalogue) {
+  console.log(catalogue[property]);
+}
