@@ -486,31 +486,31 @@ for (let row = 0; row < matrix.length; row++) {
 
 //Challenge 2
 
-const products = [
-  { id: 1, name: "Snake Plant", price: 150 },
-  { id: 2, name: "Aloe Vera", price: 80 },
-  { id: 3, name: "Monstera", price: 250 }
-];
-
-const cart = [
-  { productId: 1, quantity: 2 },
-  { productId: 3, quantity: 1 }
-];
-
-for (let i = 0; i < products.length; i++) {
-  const product = products[i];
-
-  for (let c = 0; c < cart.length; c++) {
-    const cartItem = cart[c];
-
-    if (product.id === cartItem.productId) {
-      const subTotal = product.price * cartItem.quantity;
-
-      console.log(`${product.name} --> ${product.price} x ${cartItem.quantity} = ${subTotal}`)
-    }
-  }
-}
-
+// const products = [
+//   { id: 1, name: "Snake Plant", price: 150 },
+//   { id: 2, name: "Aloe Vera", price: 80 },
+//   { id: 3, name: "Monstera", price: 250 }
+// ];
+//
+// const cart = [
+//   { productId: 1, quantity: 2 },
+//   { productId: 3, quantity: 1 }
+// ];
+//
+// for (let i = 0; i < products.length; i++) {
+//   const product = products[i];
+//
+//   for (let c = 0; c < cart.length; c++) {
+//     const cartItem = cart[c];
+//
+//     if (product.id === cartItem.productId) {
+//       const subTotal = product.price * cartItem.quantity;
+//
+//       console.log(`${product.name} --> ${product.price} x ${cartItem.quantity} = ${subTotal}`)
+//     }
+//   }
+// }
+//
 
 //for....of Loop
 
@@ -584,3 +584,14 @@ const property = "price";
 for (const key in catalogue) {
   console.log(catalogue[property]);
 }
+
+//forEach
+
+const products = [
+    { name: "Snake Plant", price: 150 },
+    { name: "Monstera", price: 250 }
+  ];
+
+  const result  = products.forEach((plant) => {
+    console.log(plant.name);
+  });
