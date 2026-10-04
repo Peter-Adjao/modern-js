@@ -434,26 +434,6 @@
 
 //Nested Loop
 
-for (let i = 1; i <= 3; i++) {
-  for (let j = 1; j <= 3; j++) {
-
-    const totalMultiplication = i * j;
-
-    console.log(`${i} x ${j} = ${totalMultiplication}`);
-  }
-}
-
-const matrix = [
-  [10, 20, 30],
-  [40, 50, 60],
-  [70, 80, 90]
-];
-
-for (let row = 0; row < matrix.length; row++) {
-  for (let column = 0; column < matrix[row].length; column++) {
-    console.log(matrix[row][column]);
-  }
-}
 
 //First challenge
 
@@ -595,3 +575,28 @@ const products = [
   const result  = products.forEach((plant) => {
     console.log(plant.name);
   });
+
+  //second chaallenge
+
+  const items = [
+    { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+    { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+    { id: 3, name: "Monstera", price: 250, stock: 7 },
+    { id: 4, name: "Peace Lily", price: 120, stock: 3 }
+];
+
+
+// for (const item of items) {
+//   if (item.stock > 0) {
+//     console.log(item.name);
+//   }
+// }
+let totalItems = 0;
+
+for (const item of items) {
+   const total = item.price * item.stock;
+   totalItems+= total;
+    console.log(`${item.name} -> ${item.price} x ${item.stock} = ${total}`);
+    console.log(totalItems);
+
+}
