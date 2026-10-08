@@ -600,3 +600,26 @@ for (const item of items) {
     console.log(totalItems);
 
 }
+
+
+//Functions
+
+function greet(name) {
+  console.log(`Hello, ${name}.`);
+}
+
+greet("King");
+
+
+function add(a,b) {
+  return a + b ;
+}
+
+console.log(add(3,5));
+
+function sum(x,y) {
+  return x + y;
+}
+
+const totalAll = sum(10, 30);
+console.log(totalAll);
