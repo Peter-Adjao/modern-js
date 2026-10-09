@@ -567,14 +567,14 @@ for (const key in catalogue) {
 
 //forEach
 
-const products = [
-    { name: "Snake Plant", price: 150 },
-    { name: "Monstera", price: 250 }
-  ];
-
-  const result  = products.forEach((plant) => {
-    console.log(plant.name);
-  });
+// const products = [
+//     { name: "Snake Plant", price: 150 },
+//     { name: "Monstera", price: 250 }
+//   ];
+//
+//   const result  = products.forEach((plant) => {
+//     console.log(plant.name);
+//   });
 
   //second chaallenge
 
@@ -623,3 +623,16 @@ function sum(x,y) {
 
 const totalAll = sum(10, 30);
 console.log(totalAll);
+
+//Function challenge
+const product = {
+  name: "Monstera",
+  stock: 5
+};
+
+function isInStock(product) {
+
+  return product.stock > 0;
+}
+
+console.log(isInStock(product));
