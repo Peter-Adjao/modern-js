@@ -494,76 +494,76 @@
 
 //for....of Loop
 
-const numbers = [4, 8, 15, 16, 23, 42];
- for (const number of numbers) {
-  if (number > 20){
-    console.log(`Found: ${number}`);
-
-    break;
-  }
- }
-
-//First for..of Challenge
-
-const prices = [150, 80, 250, 120];
-
-let total = 0;
-for (const price of prices) {
-  total+= price;
-}
-console.log("The total is", total);
-
+// const numbers = [4, 8, 15, 16, 23, 42];
+//  for (const number of numbers) {
+//   if (number > 20){
+//     console.log(`Found: ${number}`);
+//
+//     break;
+//   }
+//  }
+//
+// //First for..of Challenge
+//
+// const prices = [150, 80, 250, 120];
+//
+// let total = 0;
+// for (const price of prices) {
+//   total+= price;
+// }
+// console.log("The total is", total);
+//
 
 //Second Challenge
 
-const plants = [
-  { id: 1, name: "Snake Plant", price: 150, stock: 4 },
-  { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
-  { id: 3, name: "Monstera", price: 250, stock: 7 },
-  { id: 4, name: "Peace Lily", price: 120, stock: 3 }
-];
-
-const targetId = 3;
-
-for (const plant of plants) {
-  if (plant.stock === 0) {
-
-    continue;
-  }
-
-  if (plant.id === targetId) {
-    console.log("Found:", plant.name);
-
-    break;
-  }
-}
-
-//For...in
-
-const user = {
-  name: "Peter",
-  role: "Deeveloper",
-  country: "Ghana"
-};
-
-for (const key in user) {
-  console.log(key, ":", user[key]);
-}
-
+// const plants = [
+//   { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+//   { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+//   { id: 3, name: "Monstera", price: 250, stock: 7 },
+//   { id: 4, name: "Peace Lily", price: 120, stock: 3 }
+// ];
+//
+// const targetId = 3;
+//
+// for (const plant of plants) {
+//   if (plant.stock === 0) {
+//
+//     continue;
+//   }
+//
+//   if (plant.id === targetId) {
+//     console.log("Found:", plant.name);
+//
+//     break;
+//   }
+// }
+//
+// //For...in
+//
+// const user = {
+//   name: "Peter",
+//   role: "Deeveloper",
+//   country: "Ghana"
+// };
+//
+// for (const key in user) {
+//   console.log(key, ":", user[key]);
+// }
+//
 
 //for...in Challenge
 
-const catalogue = {
-  name: "Monstera",
-  price: 250,
-  stock: 7
-};
-
-const property = "price";
-
-for (const key in catalogue) {
-  console.log(catalogue[property]);
-}
+// const catalogue = {
+//   name: "Monstera",
+//   price: 250,
+//   stock: 7
+// };
+//
+// const property = "price";
+//
+// for (const key in catalogue) {
+//   console.log(catalogue[property]);
+// }
 
 //forEach
 
@@ -578,28 +578,28 @@ for (const key in catalogue) {
 
   //second chaallenge
 
-  const items = [
-    { id: 1, name: "Snake Plant", price: 150, stock: 4 },
-    { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
-    { id: 3, name: "Monstera", price: 250, stock: 7 },
-    { id: 4, name: "Peace Lily", price: 120, stock: 3 }
-];
-
-
-// for (const item of items) {
+//   const items = [
+//     { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+//     { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+//     { id: 3, name: "Monstera", price: 250, stock: 7 },
+//     { id: 4, name: "Peace Lily", price: 120, stock: 3 }
+// ];
+//
+//
+// // for (const item of items) {
 //   if (item.stock > 0) {
 //     console.log(item.name);
 //   }
 // }
-let totalItems = 0;
+// let totalItems = 0;
+//
+// for (const item of items) {
+//    const total = item.price * item.stock;
+//    totalItems+= total;
+//     console.log(`${item.name} -> ${item.price} x ${item.stock} = ${total}`);
+//     console.log(totalItems);
 
-for (const item of items) {
-   const total = item.price * item.stock;
-   totalItems+= total;
-    console.log(`${item.name} -> ${item.price} x ${item.stock} = ${total}`);
-    console.log(totalItems);
-
-}
+// }
 
 
 //Functions
@@ -625,14 +625,38 @@ const totalAll = sum(10, 30);
 console.log(totalAll);
 
 //Function challenge
-const product = {
-  name: "Monstera",
-  stock: 5
-};
+// const product = {
+//   name: "Monstera",
+//   stock: 5
+// };
 
-function isInStock(product) {
+// function isInStock(product) {
+//
+//   return product.stock > 0;
+// }
 
-  return product.stock > 0;
+// console.log(isInStock(product));
+
+const plantList = [
+    { id: 1, name: "Snake Plant" },
+    { id: 2, name: "Monstera Deliciosa" },
+    { id: 3, name: "Aloe Vera" },
+    { id: 4, name: "Snake Plant Laurentii" },
+    { id: 5, name: "Peace Lily" }
+];
+
+
+
+function searchProduct(products, normalizedQuery) {
+    if (normalizedQuery.length === 0) {
+      return [];
+    }
+
+        const  matchedProducts = products.filter(product =>
+          product.name.trim().toLowerCase().includes(normalizedQuery)
+        );
+
+    return matchedProducts;
 }
 
-console.log(isInStock(product));
+console.log(searchProduct(plantList, "monstera"));
