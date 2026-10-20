@@ -637,26 +637,114 @@ console.log(totalAll);
 
 // console.log(isInStock(product));
 
-const plantList = [
-    { id: 1, name: "Snake Plant" },
-    { id: 2, name: "Monstera Deliciosa" },
-    { id: 3, name: "Aloe Vera" },
-    { id: 4, name: "Snake Plant Laurentii" },
-    { id: 5, name: "Peace Lily" }
+// const plantList = [
+//     { id: 1, name: "Snake Plant" },
+//     { id: 2, name: "Monstera Deliciosa" },
+//     { id: 3, name: "Aloe Vera" },
+//     { id: 4, name: "Snake Plant Laurentii" },
+//     { id: 5, name: "Peace Lily" }
+// ];
+//
+//
+//
+// function searchProduct(products, normalizedQuery) {
+//     if (normalizedQuery.length === 0) {
+//       return [];
+//     }
+//
+//         const  matchedProducts = products.filter(product =>
+//           product.name.trim().toLowerCase().includes(normalizedQuery)
+//         );
+//
+//     return matchedProducts;
+// }
+//
+// console.log(searchProduct(plantList, "monstera"));
+//
+
+//function declaration
+
+function greet(name) {
+  return `Welcome to Jungle House, ${name}`;
+}
+
+const message = greet("Adam");
+console.log(message);
+
+// //Return values
+// function calculateSubtotal(price, quantity) {
+//     return price * quantity;
+// }
+//
+// const subtotal = calculateSubtotal(3, 6);
+// console.log(subtotal);
+
+
+// //Lesson 4 challenge 1
+//  function calculateTotal(price, quantity) {
+//    return price * quantity;
+//  }
+//
+// console.log(calculateTotal(120, 3));
+//
+// //Lesson 4 challenge 2
+//  function isInStock(product){
+//    return product.stock > 0;
+//  }
+//
+//  //Lesson 4 challenge 3
+//
+//  function findProductById(products, id) {
+//    for (const product of products) {
+//      if(id === id) {
+//        return product;
+//      }
+//    }
+//  }
+//
+//  //Lesson 4 challenge 4
+//
+//  function calculateDiscountPrice(price, discountRate) {
+//    const discount = price * discountRate;
+//    return price - discount;
+//  }
+//
+
+ //Lesson Jungle House challenge
+ const products = [
+    { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+    { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+    { id: 3, name: "Monstera", price: 250, stock: 7 }
 ];
 
 
 
-function searchProduct(products, normalizedQuery) {
-    if (normalizedQuery.length === 0) {
-      return [];
-    }
-
-        const  matchedProducts = products.filter(product =>
-          product.name.trim().toLowerCase().includes(normalizedQuery)
-        );
-
-    return matchedProducts;
+function  calculateSubtotal(price, stock) {
+  return  price * stock;
 }
 
-console.log(searchProduct(plantList, "monstera"));
+const subtotal = calculateSubtotal(250, 2);
+console.log("Subtotal:", subtotal);
+
+//Checking whether product is in Stock
+function isInStock(product) {
+
+  return product.stock > 0;
+}
+
+const targetProduct = isInStock(products, 2);
+console.log("In stock", targetProduct);
+
+
+//find product by id
+
+function findProductById(products, id) {
+  for (const product of products) {
+    if (product.id === id) {
+      return product;
+    }
+  }
+}
+
+const productFound = findProductById(products, 3);
+console.log(productFound.name);
