@@ -748,3 +748,16 @@ function findProductById(products, id) {
 
 const productFound = findProductById(products, 3);
 console.log(productFound.name);
+
+//Fucntion expression
+const findProductByIds = function (products, id) {
+  for (const product of products) {
+    if (product.id === id) {
+      return product;
+    }
+  }
+  return undefined;
+}
+
+const product = findProductByIds(products, 2)
+console .log(product.name);
