@@ -761,3 +761,34 @@ const findProductByIds = function (products, id) {
 
 const product = findProductByIds(products, 2)
 console .log(product.name);
+
+//Exprssion practice exercise -1
+const calculateTotal = function (price, quantity) {
+  return price * quantity;
+}
+
+const subTotal = calculateTotal(120, 3);
+console.log(subTotal);
+
+//practice-2 store a function
+
+const greets = function () {
+  return "Hello, there.";
+}
+
+const welcome = greets;
+console.log(welcome());
+
+//practice-3 find a product by id:
+
+const findProductsById  = function (products, id) {
+  for (const product of products) {
+    if (product.id === id) {
+      return product;
+    }
+  }
+    return undefined;
+}
+
+  const foundProduct = findProductsById(products, 3);
+  console.log(foundProduct.name);
