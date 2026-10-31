@@ -711,84 +711,131 @@ console.log(message);
 //
 
  //Lesson Jungle House challenge
- const products = [
-    { id: 1, name: "Snake Plant", price: 150, stock: 4 },
-    { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
-    { id: 3, name: "Monstera", price: 250, stock: 7 }
+//  const products = [
+//     { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+//     { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+//     { id: 3, name: "Monstera", price: 250, stock: 7 }
+// ];
+//
+//
+//
+// function  calculateSubtotal(price, stock) {
+//   return  price * stock;
+// }
+//
+// const subtotal = calculateSubtotal(250, 2);
+// console.log("Subtotal:", subtotal);
+//
+// //Checking whether product is in Stock
+// function isInStock(product) {
+//
+//   return product.stock > 0;
+// }
+//
+// const targetProduct = isInStock(products, 2);
+// console.log("In stock", targetProduct);
+//
+//
+// //find product by id
+//
+// function findProductById(products, id) {
+//   for (const product of products) {
+//     if (product.id === id) {
+//       return product;
+//     }
+//   }
+// }
+//
+// const productFound = findProductById(products, 3);
+// console.log(productFound.name);
+//
+// //Fucntion expression
+// const findProductByIds = function (products, id) {
+//   for (const product of products) {
+//     if (product.id === id) {
+//       return product;
+//     }
+//   }
+//   return undefined;
+// }
+//
+// const product = findProductByIds(products, 2)
+// console .log(product.name);
+//
+// //Exprssion practice exercise -1
+// const calculateTotal = function (price, quantity) {
+//   return price * quantity;
+// }
+//
+// const subTotal = calculateTotal(120, 3);
+// console.log(subTotal);
+//
+// //practice-2 store a function
+//
+// const greets = function () {
+//   return "Hello, there.";
+// }
+//
+// const welcome = greets;
+// console.log(welcome());
+//
+// //practice-3 find a product by id:
+//
+// const findProductsById  = function (products, id) {
+//   for (const product of products) {
+//     if (product.id === id) {
+//       return product;
+//     }
+//   }
+//     return undefined;
+// }
+//
+//   const foundProduct = findProductsById(products, 3);
+//   console.log(foundProduct.name);
+//
+//
+// //practical Challenge
+//
+// const calculateDiscountPrice = function (price, discountRate) {
+//   const discount = price * discountRate;
+//   return price - discount;
+// }
+//
+// const finalPrice = calculateDiscountPrice(500, 0.10);
+// console.log (finalPrice);
+
+//Arrow Functions
+
+const products = [
+  { id: 1, name: "Snake Plant", price: 150, stock: 4 },
+  { id: 2, name: "Aloe Vera", price: 80, stock: 0 },
+  { id: 3, name: "Monstera", price: 250, stock: 7 },
+  { id: 4, name: "Peace Lily", price: 120, stock: 3 }
 ];
 
+//Task A
 
+const calculateDiscount =  (price, discountRate) => price * discountRate;
+ const discount = calculateDiscount(500, 0.10);
+ console.log(discount);
 
-function  calculateSubtotal(price, stock) {
-  return  price * stock;
-}
+//Task  B
 
-const subtotal = calculateSubtotal(250, 2);
-console.log("Subtotal:", subtotal);
+const availableProducts = products.filter(
+   product => product.stock > 0
+);
 
-//Checking whether product is in Stock
-function isInStock(product) {
+console.log(availableProducts);
 
-  return product.stock > 0;
-}
+//Task C
 
-const targetProduct = isInStock(products, 2);
-console.log("In stock", targetProduct);
+const displayProductNames = products.map(
+  product => product.name
+)
 
+console.log(displayProductNames);
 
-//find product by id
+//Task D
 
-function findProductById(products, id) {
-  for (const product of products) {
-    if (product.id === id) {
-      return product;
-    }
-  }
-}
-
-const productFound = findProductById(products, 3);
-console.log(productFound.name);
-
-//Fucntion expression
-const findProductByIds = function (products, id) {
-  for (const product of products) {
-    if (product.id === id) {
-      return product;
-    }
-  }
-  return undefined;
-}
-
-const product = findProductByIds(products, 2)
-console .log(product.name);
-
-//Exprssion practice exercise -1
-const calculateTotal = function (price, quantity) {
-  return price * quantity;
-}
-
-const subTotal = calculateTotal(120, 3);
-console.log(subTotal);
-
-//practice-2 store a function
-
-const greets = function () {
-  return "Hello, there.";
-}
-
-const welcome = greets;
-console.log(welcome());
-
-//practice-3 find a product by id:
-
-const findProductsById  = function (products, id) {
-  for (const product of products) {
-    if (product.id === id) {
-      return product;
-    }
-  }
-    return undefined;
-}
-
-  const foundProduct = findProductsById(products, 3);
-  console.log(foundProduct.name);
+const createProduct = (id, name, price, stock) => ({id, name, price, stock});
+console.log(createProduct(5, "Rubber Plant", 180, 6));
