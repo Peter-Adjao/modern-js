@@ -839,3 +839,14 @@ console.log(displayProductNames);
 
 const createProduct = (id, name, price, stock) => ({id, name, price, stock});
 console.log(createProduct(5, "Rubber Plant", 180, 6));
+
+//Parameter
+
+const calculateFinalPrice = (price, quantity, discountRate) => {
+  const subtotal = price * quantity;
+  const discount = subtotal * discountRate;
+  const finalAmount = subtotal - discount;
+  return finalAmount;
+}
+
+console.log(calculateFinalPrice(500, 2, 0.10));
