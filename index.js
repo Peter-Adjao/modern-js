@@ -850,3 +850,14 @@ const calculateFinalPrice = (price, quantity, discountRate) => {
 }
 
 console.log(calculateFinalPrice(500, 2, 0.10));
+
+//Arggument Challenge
+
+const calculateOrderTotal = (price, quantity, deliveryFee) => {
+  const subtotal = price * quantity;
+  const totalAmountPayable = subtotal + deliveryFee;
+
+  return totalAmountPayable;
+}
+
+console.log(calculateOrderTotal(250, 2, 30));
