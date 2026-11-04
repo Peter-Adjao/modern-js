@@ -861,3 +861,36 @@ const calculateOrderTotal = (price, quantity, deliveryFee) => {
 }
 
 console.log(calculateOrderTotal(250, 2, 30));
+
+//change prooduct
+
+const changeProduct = product => {
+  product = {
+    name: "Peace Lily",
+    price: 120
+  };
+};
+
+const aplant = {
+  name: "Snake Plant",
+  price: 150
+};
+
+changeProduct(aplant);
+
+console.log(aplant.name);
+
+//Object mutation
+
+const updateStock = product => {
+  product.stock = 10;
+};
+
+const plant = {
+  name: "Aloe Vera",
+  stock: 3
+};
+
+updateStock(plant);
+
+console.log(plant.stock);
