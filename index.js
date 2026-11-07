@@ -894,3 +894,11 @@ const plant = {
 updateStock(plant);
 
 console.log(plant.stock);
+
+
+//Default values
+ function greet(name="Guest") {
+   return `Hello ${name}`
+ };
+
+ console.log(greet());
