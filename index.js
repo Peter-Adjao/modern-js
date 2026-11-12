@@ -902,3 +902,43 @@ console.log(plant.stock);
  };
 
  console.log(greet());
+
+ //
+ function calculateTotal(...prices) {
+  let total = 0;
+
+  for (const price of prices) {
+    total += price;
+  }
+
+  return total;
+}
+
+calculateTotal(10, 20, 30);
+
+//Object mutation and reassignment
+
+const oldPlant = {
+  name: "Monstera",
+  stock: 7
+};
+
+const replacePlant = (product) => {
+  product = {
+    name: "Aloe Vera",
+    stock: 20
+  };
+};
+
+replacePlant(oldPlant);
+
+console.log(oldPlant.name);
+console.log(oldPlant.stock);
+
+///Not nowrap
+const updateStock = (product, newStock) => {
+  return {
+    ...product,
+    stock: newStock,
+  };
+};
