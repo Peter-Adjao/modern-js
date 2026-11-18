@@ -815,130 +815,154 @@ const products = [
 
 //Task A
 
-const calculateDiscount =  (price, discountRate) => price * discountRate;
- const discount = calculateDiscount(500, 0.10);
- console.log(discount);
+// const calculateDiscount =  (price, discountRate) => price * discountRate;
+//  const discount = calculateDiscount(500, 0.10);
+//  console.log(discount);
+//
+// //Task  B
+//
+// const availableProducts = products.filter(
+//    product => product.stock > 0
+// );
+//
+// console.log(availableProducts);
+//
+// //Task C
+//
+// const displayProductNames = products.map(
+//   product => product.name
+// )
+//
+// console.log(displayProductNames);
+//
+// //Task D
+//
+// const createProduct = (id, name, price, stock) => ({id, name, price, stock});
+// console.log(createProduct(5, "Rubber Plant", 180, 6));
+//
+// //Parameter
+//
+// const calculateFinalPrice = (price, quantity, discountRate) => {
+//   const subtotal = price * quantity;
+//   const discount = subtotal * discountRate;
+//   const finalAmount = subtotal - discount;
+//   return finalAmount;
+// }
+//
+// console.log(calculateFinalPrice(500, 2, 0.10));
+//
+// //Arggument Challenge
+//
+// const calculateOrderTotal = (price, quantity, deliveryFee) => {
+//   const subtotal = price * quantity;
+//   const totalAmountPayable = subtotal + deliveryFee;
+//
+//   return totalAmountPayable;
+// }
+//
+// console.log(calculateOrderTotal(250, 2, 30));
+//
+// //change prooduct
+//
+// const changeProduct = product => {
+//   product = {
+//     name: "Peace Lily",
+//     price: 120
+//   };
+// };
+//
+// const aplant = {
+//   name: "Snake Plant",
+//   price: 150
+// };
+//
+// changeProduct(aplant);
+//
+// console.log(aplant.name);
+//
+// //Object mutation
+//
+// const updateStock = product => {
+//   product.stock = 10;
+// };
+//
+// const plant = {
+//   name: "Aloe Vera",
+//   stock: 3
+// };
+//
+// updateStock(plant);
+//
+// console.log(plant.stock);
+//
+//
+// //Default values
+//  function greet(name="Guest") {
+//    return `Hello ${name}`
+//  };
+//
+//  console.log(greet());
+//
+//  //
+//  function calculateTotal(...prices) {
+//   let total = 0;
+//
+//   for (const price of prices) {
+//     total += price;
+//   }
+//
+//   return total;
+// }
+//
+// calculateTotal(10, 20, 30);
+//
+// //Object mutation and reassignment
+//
+// const oldPlant = {
+//   name: "Monstera",
+//   stock: 7
+// };
+//
+// const replacePlant = (product) => {
+//   product = {
+//     name: "Aloe Vera",
+//     stock: 20
+//   };
+// };
+//
+// replacePlant(oldPlant);
+//
+// console.log(oldPlant.name);
+// console.log(oldPlant.stock);
+//
+// ///Not nowrap
+// const updateStock = (product, newStock) => {
+//   return {
+//     ...product,
+//     stock: newStock,
+//   };
+// };
 
-//Task  B
+//Return values
 
-const availableProducts = products.filter(
-   product => product.stock > 0
-);
-
-console.log(availableProducts);
-
-//Task C
-
-const displayProductNames = products.map(
-  product => product.name
-)
-
-console.log(displayProductNames);
-
-//Task D
-
-const createProduct = (id, name, price, stock) => ({id, name, price, stock});
-console.log(createProduct(5, "Rubber Plant", 180, 6));
-
-//Parameter
-
-const calculateFinalPrice = (price, quantity, discountRate) => {
-  const subtotal = price * quantity;
-  const discount = subtotal * discountRate;
-  const finalAmount = subtotal - discount;
-  return finalAmount;
-}
-
-console.log(calculateFinalPrice(500, 2, 0.10));
-
-//Arggument Challenge
-
-const calculateOrderTotal = (price, quantity, deliveryFee) => {
-  const subtotal = price * quantity;
-  const totalAmountPayable = subtotal + deliveryFee;
-
-  return totalAmountPayable;
-}
-
-console.log(calculateOrderTotal(250, 2, 30));
-
-//change prooduct
-
-const changeProduct = product => {
-  product = {
-    name: "Peace Lily",
-    price: 120
-  };
+const calculateTotal = (price, quantity) => {
+  return price * quantity;
 };
 
-const aplant = {
-  name: "Snake Plant",
-  price: 150
-};
+const total = calculateTotal (150, 3);
 
-changeProduct(aplant);
+console.log(total);
 
-console.log(aplant.name);
-
-//Object mutation
-
-const updateStock = product => {
-  product.stock = 10;
-};
-
-const plant = {
-  name: "Aloe Vera",
-  stock: 3
-};
-
-updateStock(plant);
-
-console.log(plant.stock);
-
-
-//Default values
- function greet(name="Guest") {
-   return `Hello ${name}`
- };
-
- console.log(greet());
-
- //
- function calculateTotal(...prices) {
-  let total = 0;
-
-  for (const price of prices) {
-    total += price;
+//
+const findProduct = (products, id) => {
+  for (const product of products) {
+    if (product.id === id) {
+      return product;
+    }
   }
 
-  return total;
-}
-
-calculateTotal(10, 20, 30);
-
-//Object mutation and reassignment
-
-const oldPlant = {
-  name: "Monstera",
-  stock: 7
+  console.log("Search completed, no product found.");
 };
 
-const replacePlant = (product) => {
-  product = {
-    name: "Aloe Vera",
-    stock: 20
-  };
-};
-
-replacePlant(oldPlant);
-
-console.log(oldPlant.name);
-console.log(oldPlant.stock);
-
-///Not nowrap
-const updateStock = (product, newStock) => {
-  return {
-    ...product,
-    stock: newStock,
-  };
-};
+const foundAMatch = findProduct(products, 3);
+console.log(foundAMatch);
