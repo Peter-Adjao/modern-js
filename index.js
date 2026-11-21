@@ -966,3 +966,26 @@ const findProduct = (products, id) => {
 
 const foundAMatch = findProduct(products, 3);
 console.log(foundAMatch);
+
+
+//default parameters
+function greetCustomer(name="Customer") {
+  return `welcome, ${name}`;
+}
+console.log(greetCustomer("Prince"));
+
+//default value practical challenge
+function createCartItem(product, quantity = 1) {
+  if (!product || typeof product.price !== "number") {
+    throw new Error("A valid product with a numeric price is required.");
+  }
+  if (!Number.isInteger(quantity) || quantity < 1) {
+    throw new Error("Quantity must be a positive integer.");
+  }
+
+  return {
+    product,
+    quantity,
+    subtotal: product.price * quantity,
+  };
+}
