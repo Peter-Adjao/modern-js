@@ -935,7 +935,7 @@ const products = [
 // console.log(oldPlant.name);
 // console.log(oldPlant.stock);
 //
-// ///Not nowrap
+// ///Creating a new product without mutating the old
 // const updateStock = (product, newStock) => {
 //   return {
 //     ...product,
@@ -989,3 +989,51 @@ function createCartItem(product, quantity = 1) {
     subtotal: product.price * quantity,
   };
 }
+
+//Rest parameters
+
+const calculateTotalPrices = (...prices) => {
+  let total = 0;
+
+  for (const price of prices) {
+    total += price;
+  }
+
+  return total;
+};
+
+console.log(calculateTotalPrices(80, 100, 57));
+
+
+//Rest parameter practical challenge-1
+
+const calculateOverallTotal = (...prices) => {
+  let total = 0;
+
+  for (const price of prices) {
+    total += price;
+  }
+
+  return total;
+};
+
+console.log(calculateOverallTotal(450, 670, 100, 300, 543));
+
+
+//Rest parameter practical challennrge-2
+
+ const calculateAverage = (...scores) => {
+
+   let total = 0;
+
+   for (const score of scores) {
+     total += score;
+   }
+
+   if (scores.length === 0) {
+     return 0;
+   }
+   return total / scores.length;
+ };
+
+ console.log(calculateAverage(4, 5));
